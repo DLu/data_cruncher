@@ -11,6 +11,9 @@ repos:
   - id: destroyed-symlinks
   - id: check-symlinks
   - id: check-case-conflict
+  - id: check-ast
+  - id: double-quote-string-fixer
+  - id: requirements-txt-fixer
   rev: v5.0.0
 - repo: https://github.com/codespell-project/codespell
   hooks:
@@ -18,5 +21,13 @@ repos:
     args:
     - --write-changes
   rev: v2.3.0
+- repo: https://github.com/hhatto/autopep8
+  hooks:
+  - id: autopep8
+  rev: v2.3.1
+- repo: https://github.com/PyCQA/flake8
+  hooks:
+  - id: flake8
+  rev: 7.1.1
 ci:
   autoupdate_schedule: quarterly

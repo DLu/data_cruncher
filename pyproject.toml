@@ -1,0 +1,28 @@
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[project]
+name = "data_cruncher"
+description = "A simple implementation of the Wikidata REST API and SPARQL API"
+authors = [
+  { name = "David V. Lu!!", email = "davidvlu@gmail.com" },
+]
+maintainers = [
+  { name = "David V. Lu!!", email = "davidvlu@gmail.com" },
+]
+
+dependencies = [
+]
+
+requires-python = ">=3.9"
+
+dynamic = ["version"]
+
+[project.urls]
+Homepage = "https://github.com/DLu/data_cruncher"
+"Bug Tracker" = "https://github.com/DLu/data_cruncher/issues"
+
+[tool.hatch]
+version.source = "vcs"
+build.hooks.vcs.version-file = "src/data_cruncher/_version.py"
